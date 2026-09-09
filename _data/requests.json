@@ -1,0 +1,38 @@
+[
+  {
+    "agency": "Lancaster County Clerk",
+    "agencyType": "County",
+    "jurisdiction": "Lancaster County, NE",
+    "dateFiled": "2026-09-09",
+    "status": "Pending",
+    "muckrockUrl": "",
+    "notes": ""
+  },
+  {
+    "agency": "Lancaster County Sheriff's Office",
+    "agencyType": "County",
+    "jurisdiction": "Lancaster County, NE",
+    "dateFiled": "2026-09-09",
+    "status": "Pending",
+    "muckrockUrl": "",
+    "notes": ""
+  },
+  {
+    "agency": "Lincoln Police Department",
+    "agencyType": "City",
+    "jurisdiction": "Lincoln, NE",
+    "dateFiled": "2026-09-09",
+    "status": "Pending",
+    "muckrockUrl": "",
+    "notes": ""
+  },
+  {
+    "agency": "Nebraska Crime Commission",
+    "agencyType": "State",
+    "jurisdiction": "State of Nebraska",
+    "dateFiled": "2026-09-09",
+    "status": "Pending",
+    "muckrockUrl": "",
+    "notes": ""
+  }
+]

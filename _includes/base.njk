@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if title %}{{ title }} · {% endif %}Quis Custodiet Lincoln</title>
+  <meta name="description" content="Tracking public records requests related to automated license plate reader (ALPR) systems in Lincoln, Nebraska.">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a href="/" class="site-title">Quis Custodiet Lincoln</a>
+      <nav class="site-nav">
+        <a href="/" {% if page.url == "/" %}class="active"{% endif %}>Requests</a>
+        <a href="/documents/" {% if page.url == "/documents/" %}class="active"{% endif %}>Documents</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    {{ content | safe }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>
+        Public records requests filed under the
+        <a href="https://nebraskalegislature.gov/laws/statutes.php?statute=84-712" target="_blank" rel="noopener">Nebraska Public Records Act</a>,
+        Neb. Rev. Stat. §§ 84-712 through 84-712.09.
+        Requests submitted via <a href="https://www.muckrock.com" target="_blank" rel="noopener">MuckRock</a>.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
