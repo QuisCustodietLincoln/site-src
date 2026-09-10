@@ -24,6 +24,12 @@ eleventyComputed:
       <span class="profile-label">ALPR Status</span>
       <span class="profile-value">{{ ag.alprStatus }}</span>
     </div>
+    {% if ag.listingBasis and ag.listingBasis.length > 0 %}
+    <div class="profile-row">
+      <span class="profile-label">Listed Because</span>
+      <span class="profile-value">{{ ag.listingBasis | join(" · ") }}</span>
+    </div>
+    {% endif %}
     <div class="profile-row">
       <span class="profile-label">Current Policy</span>
       <span class="profile-value {% if not ag.currentPolicy %}muted{% endif %}">

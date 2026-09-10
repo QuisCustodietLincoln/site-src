@@ -26,8 +26,31 @@ permalink: /agencies/index.html
       <div class="agency-card-status">
         <span class="badge badge-{{ agency.alprStatus | statusClass }}">{{ agency.alprStatus }}</span>
       </div>
+      {% if agency.listingBasis and agency.listingBasis.length > 0 %}
+      <div class="agency-card-basis">{{ agency.listingBasis | join(" · ") }}</div>
+      {% endif %}
     </a>
     {% endfor %}
+  </div>
+
+  <div class="agency-legend">
+    <p class="legend-title">Why is an agency listed?</p>
+    <div class="table-wrap">
+      <table class="legend-table">
+        <thead>
+          <tr><th>Basis</th><th>Meaning</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Request filed</td><td>A public records request has been submitted to this agency.</td></tr>
+          <tr><td>Policy obtained</td><td>A policy or standard operating procedure document has been located.</td></tr>
+          <tr><td>Contract obtained</td><td>A vendor contract, purchase order, or procurement record exists.</td></tr>
+          <tr><td>Statutory report</td><td>The agency has filed a § 60-3206 annual ALPR report.</td></tr>
+          <tr><td>Data-sharing documented</td><td>A data-sharing or access agreement involving this agency is documented.</td></tr>
+          <tr><td>Non-use reported</td><td>The agency has stated it does not operate an ALPR system.</td></tr>
+          <tr><td>Not yet determined</td><td>The project has not yet confirmed whether this agency operates a system.</td></tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 
 </div>

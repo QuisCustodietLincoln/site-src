@@ -530,6 +530,25 @@ tbody td {
   font-size: 0.78rem;
 }
 
+.agency-card-basis {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-top: 6px;
+}
+
+.agency-legend {
+  margin-bottom: 56px;
+}
+
+.agency-legend .legend-title {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
 /* ── Prose content (about, contributing, templates) ── */
 
 .prose {
