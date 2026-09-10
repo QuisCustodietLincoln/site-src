@@ -6,6 +6,25 @@
   <title>{% if title and title != "Home" %}{{ title }} · {% endif %}ALPR Nebraska</title>
   <meta name="description" content="An independent public-interest archive tracking public records requests and released documents on automated license plate reader systems in Nebraska.">
 
+  <!-- Canonical -->
+  <link rel="canonical" href="https://alprnebraska.org{{ page.url }}">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ALPR Nebraska",
+    "url": "https://alprnebraska.org",
+    "description": "An independent public-interest archive tracking public records on automated license plate reader systems in Nebraska.",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "info@alprnebraska.org",
+      "contactType": "general"
+    }
+  }
+  </script>
+
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="ALPR Nebraska">

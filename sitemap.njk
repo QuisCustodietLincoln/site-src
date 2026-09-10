@@ -1,0 +1,35 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  {# Static pages #}
+  {% set staticPages = ["/", "/requests/", "/documents/", "/agencies/", "/about/", "/contributing/", "/templates/",
+    "/templates/municipal-police/", "/templates/county-sheriff/", "/templates/city-clerk/",
+    "/templates/county-clerk/", "/templates/state-agency/", "/templates/university-police/"] %}
+  {% for url in staticPages %}
+  <url>
+    <loc>https://alprnebraska.org{{ url }}</loc>
+    <lastmod>{{ build.iso }}</lastmod>
+  </url>
+  {% endfor %}
+
+  {# Agency profile pages (from _data/agencies.json) #}
+  {% for agency in agencies %}
+  <url>
+    <loc>https://alprnebraska.org/agencies/{{ agency.slug }}/</loc>
+    <lastmod>{{ build.iso }}</lastmod>
+  </url>
+  {% endfor %}
+
+  {# Document folder pages (from _data/requests.json) #}
+  {% for req in requests %}
+  <url>
+    <loc>https://alprnebraska.org/documents/{{ req.requestId }}/</loc>
+    <lastmod>{{ build.iso }}</lastmod>
+  </url>
+  {% endfor %}
+
+</urlset>
