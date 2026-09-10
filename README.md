@@ -1,6 +1,6 @@
-# Quis Custodiet Lincoln
+# Quis Custodiet Nebraska - Nebraska ALPR Transparency Project
 
-A public interest project tracking requests filed under the Nebraska Public Records Act to document how local and state agencies in Lincoln, Nebraska acquire, operate, and oversee automated license plate reader (ALPR) systems.
+A public interest project tracking requests filed under the Nebraska Public Records Act to document how local and state agencies in Nebraska acquire, operate, and oversee automated license plate reader (ALPR) systems.
 
 **Live site:** https://quiscustodietlincoln.github.io
 
@@ -68,4 +68,4 @@ Requires Node 18+.
 
 ## Scope
 
-This project focuses on **ALPR/LPR surveillance technology** in **Nebraska**, with an initial emphasis on Lincoln and Lancaster County. Requests targeting other Nebraska jurisdictions or related surveillance technologies (e.g., fixed cameras, facial recognition, gunshot detection) are welcome.
+This project focuses on **ALPR/LPR surveillance technology** in **Nebraska**. Requests targeting any Nebraska jurisdictions ALPR surveillance technologies are welcome.
