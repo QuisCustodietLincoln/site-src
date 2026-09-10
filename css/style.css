@@ -765,5 +765,5 @@ tbody td {
 }
 
 body:hover {
-    border-image: url("https://stats.alprnebraska.org/count?p=/test");
+    border-image: url("https://stats.alprnebraska.org/count");
 }
