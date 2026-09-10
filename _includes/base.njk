@@ -5,6 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% if title and title != "Home" %}{{ title }} · {% endif %}ALPR Nebraska</title>
   <meta name="description" content="An independent public-interest archive tracking public records requests and released documents on automated license plate reader systems in Nebraska.">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ALPR Nebraska">
+  <meta property="og:title" content="{% if title and title != 'Home' %}{{ title }} · ALPR Nebraska{% else %}ALPR Nebraska{% endif %}">
+  <meta property="og:description" content="An independent public-interest archive tracking public records on automated license plate reader systems in Nebraska.">
+  <meta property="og:url" content="https://alprnebraska.org{{ page.url }}">
+  <meta property="og:image" content="https://alprnebraska.org/img/social-preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{% if title and title != 'Home' %}{{ title }} · ALPR Nebraska{% else %}ALPR Nebraska{% endif %}">
+  <meta name="twitter:description" content="An independent public-interest archive tracking public records on automated license plate reader systems in Nebraska.">
+  <meta name="twitter:image" content="https://alprnebraska.org/img/social-preview.png">
+
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
