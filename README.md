@@ -1,57 +1,99 @@
-# Quis Custodiet Nebraska - Nebraska ALPR Transparency Project
+# ALPR Nebraska — Nebraska ALPR Transparency Project
 
-A public interest project tracking requests filed under the Nebraska Public Records Act to document how local and state agencies in Nebraska acquire, operate, and oversee automated license plate reader (ALPR) systems.
+An independent public-interest archive tracking public records requests and released documents on how Nebraska governmental agencies acquire, operate, and oversee automated license plate reader (ALPR) systems.
 
-**Live site:** https://quiscustodietlincoln.github.io
+**Live site:** https://alprnebraska.org
 
 ---
 
 ## Contributing
 
+See [the contributing page](https://alprnebraska.org/contributing/) for the full guide, or use the pull request template that loads automatically when you open a PR.
+
 ### Add a public records request
 
-If you've filed a request with a Nebraska agency related to ALPR/LPR surveillance technology, open a PR adding an entry to [`_data/requests.json`](_data/requests.json):
+Add an entry to [`_data/requests.json`](_data/requests.json). The `requestId` is assigned by the project editor in `QCN-NE-YYYY-NNN` format — leave it blank if submitting for review, and the editor will assign one before merging.
 
 ```json
 {
+  "requestId": "QCN-NE-2026-005",
   "agency": "Full agency name",
   "agencyType": "City | County | State | Federal",
   "jurisdiction": "City/County, NE",
   "dateFiled": "YYYY-MM-DD",
-  "status": "Pending",
+  "status": "Filed",
   "muckrockUrl": "https://www.muckrock.com/foi/...",
   "notes": ""
 }
 ```
 
-Valid `status` values: `Pending`, `Acknowledged`, `Partial Response`, `Complete`, `Appealed`, `Overdue`, `No Records`
-
-Include a link to the MuckRock request page if one exists. If you filed directly with the agency (not via MuckRock), leave `muckrockUrl` empty and add context in `notes`.
+Valid `status` values: `Filed`, `Pending`, `Extension / estimate received`, `Partial production`, `Completed`, `Denied / partially denied`, `Appealed / challenged`
 
 ---
 
 ### Add a released document
 
-If an agency has released records in response to a request, open a PR adding an entry to [`_data/documents.json`](_data/documents.json):
+Documents are organized by request ID. Each request has a folder under `documents/`:
 
-```json
-{
-  "agency": "Full agency name",
-  "title": "Descriptive title of the document",
-  "type": "Policy | Contract | Report | Correspondence | Invoice | Other",
-  "dateReceived": "YYYY-MM-DD",
-  "description": "One sentence describing what this document contains.",
-  "fileUrl": "https://..."
-}
+```
+documents/
+└── QCN-NE-2026-001/
+    ├── index.md                          ← request metadata (already exists)
+    ├── 2026-09-22-agency-filename.pdf    ← the released file
+    └── 2026-09-22-agency-filename.md     ← metadata for that file
 ```
 
-For `fileUrl`, link to the document on MuckRock, a government website, or another permanent host. If you want to host it in this repo for archival permanence, place the file in [`documents/files/`](documents/files/) and set `fileUrl` to `/documents/files/your-filename.pdf`.
+**Step 1** — Drop the PDF (or other file) into the correct `documents/QCN-NE-YYYY-NNN/` folder.
+
+**Step 2** — Create a matching `.md` metadata file alongside it:
+
+```markdown
+---
+title: Descriptive title of the document
+source_agency: Full agency name
+received_date: YYYY-MM-DD
+document_date: YYYY-MM-DD
+request_id: QCN-NE-2026-001
+source_type: Public-records production | Policy | Annual report | Correspondence | Other
+original_filename: original-name-from-agency.pdf
+sha256: "<hash>"
+redactions: "Agency-applied redactions preserved" | "None apparent"
+---
+```
+
+**Step 3** — Update the `status` field for that request in `_data/requests.json`.
 
 ---
 
 ### Update a request status
 
-As requests progress, open a PR updating the `status` field (and any other changed fields) for the relevant entry in `_data/requests.json`.
+Edit the relevant entry in [`_data/requests.json`](_data/requests.json) and update `status` (and any other changed fields such as `notes`).
+
+---
+
+### Add or update an agency profile
+
+Agency profiles live in [`_data/agencies.json`](_data/agencies.json). Each entry supports these fields:
+
+```json
+{
+  "name": "Full agency name",
+  "slug": "url-slug",
+  "jurisdiction": "City/County/State",
+  "governmentLevel": "Municipal | County | State | Federal",
+  "alprStatus": "Records requested | Reported use | No confirmation yet",
+  "currentPolicy": "https://... or null",
+  "privacyPolicy": "https://... or null",
+  "annualReports": [{ "label": "2024", "url": "https://..." }],
+  "knownVendors": ["Axon", "Flock"],
+  "knownProgramStart": "2021 or null",
+  "requestIds": ["QCN-NE-2026-001"],
+  "lastReviewed": "YYYY-MM-DD",
+  "openQuestions": ["Question one?", "Question two?"]
+}
+```
+
+Only include `knownVendors` and `knownProgramStart` when supported by a primary-source document.
 
 ---
 
@@ -60,12 +102,13 @@ As requests progress, open a PR updating the `status` field (and any other chang
 ```bash
 npm install
 npm run serve   # builds and watches at http://localhost:8080
+npm run build   # one-time build to _site/
 ```
 
-Requires Node 18+.
+Requires Node 18+. Built with [Eleventy](https://www.11ty.dev/) 3.x.
 
 ---
 
 ## Scope
 
-This project focuses on **ALPR/LPR surveillance technology** in **Nebraska**. Requests targeting any Nebraska jurisdictions ALPR surveillance technologies are welcome.
+ALPR/LPR surveillance technology at Nebraska governmental agencies. Requests targeting any Nebraska jurisdiction are welcome. See the [About page](https://alprnebraska.org/about/) for full in-scope/out-of-scope criteria and editorial policy.
