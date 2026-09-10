@@ -1,0 +1,47 @@
+---
+layout: base.njk
+---
+<section class="page-header">
+  <div class="container">
+    <p class="breadcrumb"><a href="/documents/">Documents</a></p>
+    <p class="request-id-label">{{ requestId }}</p>
+    <h1>{{ agency }}</h1>
+  </div>
+</section>
+
+<div class="container">
+
+  <div class="profile-grid">
+    <div class="profile-row">
+      <span class="profile-label">Filed</span>
+      <span class="profile-value">{{ dateFiled | dateDisplay }}</span>
+    </div>
+    <div class="profile-row">
+      <span class="profile-label">Status</span>
+      <span class="profile-value">
+        <span class="badge badge-{{ status | statusClass }}">{{ status }}</span>
+      </span>
+    </div>
+    {% if muckrockUrl %}
+    <div class="profile-row">
+      <span class="profile-label">MuckRock</span>
+      <span class="profile-value">
+        <a class="ext-link" href="{{ muckrockUrl }}" target="_blank" rel="noopener">View request ↗</a>
+      </span>
+    </div>
+    {% endif %}
+  </div>
+
+  <div class="section-header">
+    <h2>Released Documents</h2>
+  </div>
+
+  {% if content and content | trim %}
+    {{ content | safe }}
+  {% else %}
+  <div class="empty-state">
+    <p>No documents have been released for this request yet.</p>
+  </div>
+  {% endif %}
+
+</div>

@@ -1,0 +1,105 @@
+---
+layout: base.njk
+title: Requests
+permalink: /requests/index.html
+---
+
+<section class="page-header">
+  <div class="container">
+    <h1>Public Records Requests</h1>
+    <p>
+      All requests filed under the Nebraska Public Records Act, Neb. Rev. Stat. §§ 84-712 through
+      84-712.09. Agencies must respond within four business days with records, a written denial,
+      or a notice of additional time needed.
+    </p>
+  </div>
+</section>
+
+<div class="container">
+
+  <div class="section-header">
+    <h2>All Requests</h2>
+    <span class="count">{{ requests | length }}</span>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Agency</th>
+          <th>Filed</th>
+          <th>Status</th>
+          <th>MuckRock</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for req in requests %}
+        <tr>
+          <td class="id-cell">{{ req.requestId }}</td>
+          <td>
+            <div class="agency-name">{{ req.agency }}</div>
+            <div class="agency-meta">{{ req.agencyType }} &middot; {{ req.jurisdiction }}</div>
+          </td>
+          <td class="date-cell">{{ req.dateFiled | dateDisplay }}</td>
+          <td>
+            <span class="badge badge-{{ req.status | statusClass }}">{{ req.status }}</span>
+          </td>
+          <td>
+            {% if req.muckrockUrl %}
+              <a class="ext-link" href="{{ req.muckrockUrl }}" target="_blank" rel="noopener">View ↗</a>
+            {% else %}
+              <span class="link-none">—</span>
+            {% endif %}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <div class="legend">
+    <p class="legend-title">Status Legend</p>
+    <div class="table-wrap">
+      <table class="legend-table">
+        <thead>
+          <tr>
+            <th>Status</th>
+            <th>Meaning</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="badge badge-filed">Filed</span></td>
+            <td>Request sent; delivery or receipt not yet confirmed</td>
+          </tr>
+          <tr>
+            <td><span class="badge badge-pending">Pending</span></td>
+            <td>Received or delivery confirmed; no substantive response yet</td>
+          </tr>
+          <tr>
+            <td><span class="badge badge-extension-estimate-received">Extension / estimate received</span></td>
+            <td>Agency says it needs more time or supplies a cost estimate</td>
+          </tr>
+          <tr>
+            <td><span class="badge badge-partial-production">Partial production</span></td>
+            <td>Some responsive records have been released</td>
+          </tr>
+          <tr>
+            <td><span class="badge badge-completed">Completed</span></td>
+            <td>Agency represents that its production is complete</td>
+          </tr>
+          <tr>
+            <td><span class="badge badge-denied-partially-denied">Denied / partially denied</span></td>
+            <td>Agency withheld some or all records, with stated legal basis</td>
+          </tr>
+          <tr>
+            <td><span class="badge badge-appealed-challenged">Appealed / challenged</span></td>
+            <td>Requester sought reconsideration or otherwise contested a denial</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>

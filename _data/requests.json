@@ -1,5 +1,6 @@
 [
   {
+    "requestId": "QCN-NE-2026-001",
     "agency": "Lancaster County Clerk",
     "agencyType": "County",
     "jurisdiction": "Lancaster County, NE",
@@ -9,6 +10,7 @@
     "notes": ""
   },
   {
+    "requestId": "QCN-NE-2026-002",
     "agency": "Lancaster County Sheriff's Office",
     "agencyType": "County",
     "jurisdiction": "Lancaster County, NE",
@@ -18,6 +20,7 @@
     "notes": ""
   },
   {
+    "requestId": "QCN-NE-2026-003",
     "agency": "Lincoln Police Department",
     "agencyType": "City",
     "jurisdiction": "Lincoln, NE",
@@ -27,6 +30,7 @@
     "notes": ""
   },
   {
+    "requestId": "QCN-NE-2026-004",
     "agency": "Nebraska Crime Commission",
     "agencyType": "State",
     "jurisdiction": "State of Nebraska",

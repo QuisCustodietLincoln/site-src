@@ -1,0 +1,104 @@
+---
+pagination:
+  data: agencies
+  size: 1
+  alias: ag
+permalink: "/agencies/{{ ag.slug }}/index.html"
+layout: base.njk
+eleventyComputed:
+  title: "{{ ag.name }}"
+---
+
+<section class="page-header">
+  <div class="container">
+    <p class="breadcrumb"><a href="/agencies/">Agencies</a></p>
+    <h1>{{ ag.name }}</h1>
+    <p>{{ ag.governmentLevel }} &middot; {{ ag.jurisdiction }}</p>
+  </div>
+</section>
+
+<div class="container">
+
+  <div class="profile-grid">
+    <div class="profile-row">
+      <span class="profile-label">ALPR Status</span>
+      <span class="profile-value">{{ ag.alprStatus }}</span>
+    </div>
+    <div class="profile-row">
+      <span class="profile-label">Current Policy</span>
+      <span class="profile-value {% if not ag.currentPolicy %}muted{% endif %}">
+        {% if ag.currentPolicy %}
+          <a href="{{ ag.currentPolicy }}" target="_blank" rel="noopener">View ↗</a>
+        {% else %}
+          Not yet obtained
+        {% endif %}
+      </span>
+    </div>
+    <div class="profile-row">
+      <span class="profile-label">Privacy Policy</span>
+      <span class="profile-value {% if not ag.privacyPolicy %}muted{% endif %}">
+        {% if ag.privacyPolicy %}
+          <a href="{{ ag.privacyPolicy }}" target="_blank" rel="noopener">View ↗</a>
+        {% else %}
+          Not yet obtained
+        {% endif %}
+      </span>
+    </div>
+    <div class="profile-row">
+      <span class="profile-label">Annual Reports</span>
+      <span class="profile-value {% if ag.annualReports.length == 0 %}muted{% endif %}">
+        {% if ag.annualReports.length > 0 %}
+          {% for report in ag.annualReports %}
+            <a href="{{ report.url }}" target="_blank" rel="noopener">{{ report.label }} ↗</a>
+          {% endfor %}
+        {% else %}
+          Not yet located
+        {% endif %}
+      </span>
+    </div>
+    <div class="profile-row">
+      <span class="profile-label">Known Vendors</span>
+      <span class="profile-value {% if ag.knownVendors.length == 0 %}muted{% endif %}">
+        {% if ag.knownVendors.length > 0 %}
+          {{ ag.knownVendors | join(", ") }}
+        {% else %}
+          Not confirmed by primary source
+        {% endif %}
+      </span>
+    </div>
+    <div class="profile-row">
+      <span class="profile-label">Known Program Start</span>
+      <span class="profile-value {% if not ag.knownProgramStart %}muted{% endif %}">
+        {% if ag.knownProgramStart %}
+          {{ ag.knownProgramStart }}
+        {% else %}
+          Not confirmed by primary source
+        {% endif %}
+      </span>
+    </div>
+    <div class="profile-row">
+      <span class="profile-label">Requests Filed</span>
+      <span class="profile-value">
+        {% for id in ag.requestIds %}
+          <a href="/documents/{{ id }}/">{{ id }}</a>{% if not loop.last %}, {% endif %}
+        {% endfor %}
+      </span>
+    </div>
+    <div class="profile-row">
+      <span class="profile-label">Last Reviewed</span>
+      <span class="profile-value">{{ ag.lastReviewed | dateDisplay }}</span>
+    </div>
+  </div>
+
+  {% if ag.openQuestions.length > 0 %}
+  <div class="open-questions">
+    <h3>Open Questions</h3>
+    <ol>
+      {% for q in ag.openQuestions %}
+        <li>{{ q }}</li>
+      {% endfor %}
+    </ol>
+  </div>
+  {% endif %}
+
+</div>

@@ -3,17 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{% if title %}{{ title }} · {% endif %}ALPR Nebraska</title>
-  <meta name="description" content="Tracking public records requests related to automated license plate reader (ALPR) systems in Nebraska.">
+  <title>{% if title and title != "Home" %}{{ title }} · {% endif %}ALPR Nebraska</title>
+  <meta name="description" content="An independent public-interest archive tracking public records requests and released documents on automated license plate reader systems in Nebraska.">
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
   <header class="site-header">
     <div class="container">
-      <a href="/" class="site-title">Nebraska ALPR Transparency Project</a>
+      <a href="/" class="site-title">ALPR Nebraska</a>
       <nav class="site-nav">
-        <a href="/" {% if page.url == "/" %}class="active"{% endif %}>Requests</a>
-        <a href="/documents/" {% if page.url == "/documents/" %}class="active"{% endif %}>Documents</a>
+        <a href="/"            {% if page.url == "/" %}class="active"{% endif %}>Home</a>
+        <a href="/requests/"   {% if page.url == "/requests/" %}class="active"{% endif %}>Requests</a>
+        <a href="/documents/"  {% if page.url == "/documents/" %}class="active"{% endif %}>Documents</a>
+        <a href="/agencies/"   {% if page.url.startsWith("/agencies/") %}class="active"{% endif %}>Agencies</a>
+        <a href="/templates/"  {% if page.url.startsWith("/templates/") %}class="active"{% endif %}>Templates</a>
+        <a href="/about/"      {% if page.url == "/about/" %}class="active"{% endif %}>About</a>
+        <a href="/contributing/" {% if page.url == "/contributing/" %}class="active"{% endif %}>Contributing</a>
       </nav>
     </div>
   </header>
@@ -24,11 +29,15 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p>
+      <p class="footer-scope">
+        <em>Scope and limitations:</em> This project seeks public administrative and accountability records relating to ALPR systems, including policies, procurement, installation, retention, statutory reporting, audits, and information-sharing agreements. It does not seek to publish raw license-plate capture data or personal information protected from public disclosure.
+      </p>
+      <p class="footer-meta">
         Public records requests filed under the
         <a href="https://nebraskalegislature.gov/laws/statutes.php?statute=84-712" target="_blank" rel="noopener">Nebraska Public Records Act</a>,
         Neb. Rev. Stat. §§ 84-712 through 84-712.09.
         Requests submitted via <a href="https://www.muckrock.com" target="_blank" rel="noopener">MuckRock</a>.
+        <span class="build-date">Last updated: <time datetime="{{ build.iso }}">{{ build.date }}</time>.</span>
       </p>
     </div>
   </footer>

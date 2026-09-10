@@ -1,0 +1,33 @@
+---
+layout: base.njk
+title: Agencies
+permalink: /agencies/index.html
+---
+
+<section class="page-header">
+  <div class="container">
+    <h1>Agencies</h1>
+    <p>Nebraska governmental agencies tracked by this project. Profiles are updated as requests are filed and records are received.</p>
+  </div>
+</section>
+
+<div class="container">
+
+  <div class="section-header">
+    <h2>Tracked Agencies</h2>
+    <span class="count">{{ agencies | length }}</span>
+  </div>
+
+  <div class="agency-grid">
+    {% for agency in agencies %}
+    <a class="agency-card" href="/agencies/{{ agency.slug }}/">
+      <div class="agency-card-name">{{ agency.name }}</div>
+      <div class="agency-card-meta">{{ agency.governmentLevel }} &middot; {{ agency.jurisdiction }}</div>
+      <div class="agency-card-status">
+        <span class="badge badge-{{ agency.alprStatus | statusClass }}">{{ agency.alprStatus }}</span>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+
+</div>

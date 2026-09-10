@@ -1,0 +1,81 @@
+[
+  {
+    "name": "Lancaster County Clerk / Board of Commissioners",
+    "slug": "lancaster-county-clerk",
+    "jurisdiction": "Lancaster County",
+    "governmentLevel": "County",
+    "alprStatus": "Records requested",
+    "currentPolicy": null,
+    "privacyPolicy": null,
+    "annualReports": [],
+    "knownVendors": [],
+    "knownProgramStart": null,
+    "requestIds": ["QCN-NE-2026-001"],
+    "lastReviewed": "2026-09-09",
+    "openQuestions": [
+      "Did the County Board formally approve ALPR contracts or funding via resolution or motion?",
+      "Are there interlocal agreements between Lancaster County and NDOT covering ALPR installations on state highway right-of-way?",
+      "What vendors have received County payments for ALPR equipment, software, or services since 2018?"
+    ]
+  },
+  {
+    "name": "Lancaster County Sheriff's Office",
+    "slug": "lancaster-county-sheriff",
+    "jurisdiction": "Lancaster County",
+    "governmentLevel": "County",
+    "alprStatus": "Records requested",
+    "currentPolicy": null,
+    "privacyPolicy": null,
+    "annualReports": [],
+    "knownVendors": [],
+    "knownProgramStart": null,
+    "requestIds": ["QCN-NE-2026-002"],
+    "lastReviewed": "2026-09-09",
+    "openQuestions": [
+      "Has LCSO installed fixed ALPR units on NDOT right-of-way, and under what agreement?",
+      "What Motorola, Axon, or Flock systems does LCSO operate, and how many units?",
+      "Has LCSO submitted annual § 60-3206 reports to the Nebraska Crime Commission?",
+      "Does LCSO share ALPR data with LPD, the Nebraska State Patrol, or federal task forces?"
+    ]
+  },
+  {
+    "name": "Lincoln Police Department",
+    "slug": "lincoln-police-department",
+    "jurisdiction": "City of Lincoln",
+    "governmentLevel": "Municipal",
+    "alprStatus": "Records requested",
+    "currentPolicy": null,
+    "privacyPolicy": null,
+    "annualReports": [],
+    "knownVendors": [],
+    "knownProgramStart": null,
+    "requestIds": ["QCN-NE-2026-003"],
+    "lastReviewed": "2026-09-09",
+    "openQuestions": [
+      "Does LPD operate fixed ALPR installations in addition to mobile units, and where?",
+      "Has LPD submitted required annual § 60-3206 reports to the Nebraska Crime Commission?",
+      "What data-sharing agreements exist with other agencies, including LCSO and Nebraska State Patrol?",
+      "Which vendors — Axon, Flock, Motorola, or others — supply LPD's ALPR systems?"
+    ]
+  },
+  {
+    "name": "Nebraska Crime Commission",
+    "slug": "nebraska-crime-commission",
+    "jurisdiction": "State of Nebraska",
+    "governmentLevel": "State",
+    "alprStatus": "Records requested",
+    "currentPolicy": null,
+    "privacyPolicy": null,
+    "annualReports": [],
+    "knownVendors": [],
+    "knownProgramStart": null,
+    "requestIds": ["QCN-NE-2026-004"],
+    "lastReviewed": "2026-09-09",
+    "openQuestions": [
+      "Have LPD and LCSO submitted the annual § 60-3206 ALPR reports required by Nebraska law?",
+      "Are § 60-3206 reports publicly available on the Commission's website or only on request?",
+      "Which entities are required to report but have not done so, and what compliance action has been taken?",
+      "Does the Commission publish aggregate statewide ALPR statistics?"
+    ]
+  }
+]

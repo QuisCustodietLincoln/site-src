@@ -1,64 +1,64 @@
 ---
 layout: base.njk
-title: Documents & Records
+title: Documents
 permalink: /documents/index.html
 ---
 
 <section class="page-header">
   <div class="container">
-    <h1>Released Records</h1>
+    <h1>Documents &amp; Records</h1>
     <p>
-      Documents and records released in response to public records requests are published here
-      as they are received. Files are hosted in this repository for permanent public access.
+      Records released in response to public records requests, organized by request ID. Each
+      request folder lists all documents produced, with metadata for each file.
     </p>
   </div>
 </section>
 
 <div class="container">
 
-{% if documents.length == 0 %}
+  {% set folders = collections.requestFolder %}
+
+  {% if not folders or folders.length == 0 %}
   <div class="empty-state">
     <p>
-      No records have been released yet. Requests were filed September 9, 2026. 
-      Under Neb. Rev. Stat. § 84-712(4), the custodians must within four business days provide the records, issue a written denial identifying the legal basis, or notify the requester that additional time is needed and provide an estimated date and cost.
+      No records have been released yet. Requests were filed September 9, 2026.
+      Under Neb. Rev. Stat. § 84-712.01, agencies must respond within four business days.
     </p>
   </div>
-{% else %}
+  {% else %}
+
   <div class="section-header">
-    <h2>Released Records</h2>
-    <span class="count">{{ documents | length }} documents</span>
+    <h2>Request Files</h2>
+    <span class="count">{{ folders | length }}</span>
   </div>
 
   <div class="table-wrap">
     <table>
       <thead>
         <tr>
+          <th>ID</th>
           <th>Agency</th>
-          <th>Document</th>
-          <th>Type</th>
-          <th>Date Received</th>
-          <th>File</th>
+          <th>Filed</th>
+          <th>Status</th>
         </tr>
       </thead>
       <tbody>
-        {% for doc in documents %}
+        {% for folder in folders | sort(false, false, "data.requestId") %}
         <tr>
-          <td>
-            <div class="agency-name">{{ doc.agency }}</div>
+          <td class="id-cell">
+            <a href="{{ folder.url }}">{{ folder.data.requestId }}</a>
           </td>
-          <td>{{ doc.title }}</td>
-          <td>{{ doc.type }}</td>
-          <td class="date-cell">{{ doc.dateReceived | dateDisplay }}</td>
+          <td class="agency-name">{{ folder.data.agency }}</td>
+          <td class="date-cell">{{ folder.data.dateFiled | dateDisplay }}</td>
           <td>
-            <a class="ext-link" href="{{ doc.fileUrl }}" target="_blank" rel="noopener">
-              View ↗
-            </a>
+            <span class="badge badge-{{ folder.data.status | statusClass }}">{{ folder.data.status }}</span>
           </td>
         </tr>
         {% endfor %}
       </tbody>
     </table>
   </div>
-{% endif %}
+
+  {% endif %}
 
 </div>

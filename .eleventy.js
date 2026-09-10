@@ -1,14 +1,23 @@
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("css");
-  eleventyConfig.addPassthroughCopy({ "documents/files": "documents/files" });
+  eleventyConfig.addPassthroughCopy("CNAME");
+  eleventyConfig.addPassthroughCopy("documents/**/*.pdf");
+  eleventyConfig.addPassthroughCopy("documents/**/*.docx");
+  eleventyConfig.addPassthroughCopy("documents/**/*.xlsx");
 
   eleventyConfig.addFilter("statusClass", function(status) {
-    return status.toLowerCase().replace(/\s+/g, "-");
+    return status.toLowerCase()
+      .replace(/[\s/]+/g, "-")
+      .replace(/-+/g, "-")
+      .replace(/^-|-$/g, "");
   });
 
   eleventyConfig.addFilter("dateDisplay", function(dateStr) {
-    const [y, m, d] = dateStr.split("-");
     const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+    if (dateStr instanceof Date) {
+      return `${months[dateStr.getUTCMonth()]} ${dateStr.getUTCDate()}, ${dateStr.getUTCFullYear()}`;
+    }
+    const [y, m, d] = String(dateStr).split("-");
     return `${months[parseInt(m) - 1]} ${parseInt(d)}, ${y}`;
   });
 

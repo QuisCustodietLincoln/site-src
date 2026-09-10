@@ -1,3 +1,5 @@
 REQUESTS/
+README.md
+.github/PULL_REQUEST_TEMPLATE.md
 node_modules/
 _site/
