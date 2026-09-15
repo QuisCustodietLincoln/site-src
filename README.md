@@ -27,7 +27,20 @@ Add an entry to [`_data/requests.json`](_data/requests.json). The `requestId` is
 }
 ```
 
-Valid `status` values: `Filed`, `Pending`, `Extension / estimate received`, `Partial production`, `Completed`, `Denied / partially denied`, `Appealed / challenged`
+Valid `status` values: `Filed`, `Pending`, `Clarification / narrowing requested`, `Extension / estimate received`, `Partial production`, `Completed`, `Denied / partially denied`, `Appealed / challenged`
+
+To add a **timeline entry** for a request (e.g. an agency response event), append to the `timeline` array in the same entry:
+
+```json
+"timeline": [
+  {
+    "date": "YYYY-MM-DD",
+    "note": "Plain-language description of what happened."
+  }
+]
+```
+
+The section only appears on the folder page when there are entries.
 
 ---
 
@@ -45,11 +58,13 @@ documents/
 
 **Step 1** — Drop the PDF (or other file) into the correct `documents/QCN-NE-YYYY-NNN/` folder.
 
-**Step 2** — Create a matching `.md` metadata file alongside it:
+**Step 2** — Create a matching `.md` metadata file alongside it. The two required frontmatter fields `layout` and `tags` wire it into the site's document collection:
 
 ```markdown
 ---
 title: Descriptive title of the document
+layout: document-sidecar.njk
+tags: releasedDocument
 source_agency: Full agency name
 received_date: YYYY-MM-DD
 document_date: YYYY-MM-DD
@@ -60,6 +75,10 @@ sha256: "<hash>"
 redactions: "Agency-applied redactions preserved" | "None apparent"
 ---
 ```
+
+Optional fields (include only when applicable): `signatory`, `sender`, `sender_title`, `public_information_officer`, `statutes_cited_by_agency` (array), `topics` (array).
+
+The `.md` filename determines the PDF URL — the site expects a `.pdf` with the same base name in the same folder.
 
 **Step 3** — Update the `status` field for that request in `_data/requests.json`.
 
@@ -88,12 +107,15 @@ Agency profiles live in [`_data/agencies.json`](_data/agencies.json). Each entry
   "knownVendors": ["Axon", "Flock"],
   "knownProgramStart": "2021 or null",
   "requestIds": ["QCN-NE-2026-001"],
+  "links": [
+    { "label": "Link label", "url": "https://..." }
+  ],
   "lastReviewed": "YYYY-MM-DD",
   "openQuestions": ["Question one?", "Question two?"]
 }
 ```
 
-Only include `knownVendors` and `knownProgramStart` when supported by a primary-source document.
+Only include `knownVendors` and `knownProgramStart` when supported by a primary-source document. The `links` array is for publicly available resources related to the agency's ALPR program (policy pages, transparency portals, statutory reports, etc.). The "Public Resources" section only appears on the agency profile when the array is non-empty.
 
 ---
 
