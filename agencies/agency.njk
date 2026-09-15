@@ -34,7 +34,11 @@ eleventyComputed:
       <span class="profile-label">Current Policy</span>
       <span class="profile-value {% if not ag.currentPolicy %}muted{% endif %}">
         {% if ag.currentPolicy %}
-          <a href="{{ ag.currentPolicy }}" target="_blank" rel="noopener">View ↗</a>
+          {% if ag.currentPolicy.url %}
+            <a href="{{ ag.currentPolicy.url }}" target="_blank" rel="noopener">{{ ag.currentPolicy.label }} ↗</a>
+          {% else %}
+            {{ ag.currentPolicy }}
+          {% endif %}
         {% else %}
           Not yet obtained
         {% endif %}
@@ -44,7 +48,11 @@ eleventyComputed:
       <span class="profile-label">Privacy Policy</span>
       <span class="profile-value {% if not ag.privacyPolicy %}muted{% endif %}">
         {% if ag.privacyPolicy %}
-          <a href="{{ ag.privacyPolicy }}" target="_blank" rel="noopener">View ↗</a>
+          {% if ag.privacyPolicy.url %}
+            <a href="{{ ag.privacyPolicy.url }}" target="_blank" rel="noopener">{{ ag.privacyPolicy.label }} ↗</a>
+          {% else %}
+            {{ ag.privacyPolicy }}
+          {% endif %}
         {% else %}
           Not yet obtained
         {% endif %}

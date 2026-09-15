@@ -52,13 +52,21 @@
     "slug": "lincoln-police-department",
     "jurisdiction": "City of Lincoln",
     "governmentLevel": "Municipal",
-    "alprStatus": "Records requested",
-    "listingBasis": ["Request filed"],
-    "currentPolicy": null,
-    "privacyPolicy": null,
-    "annualReports": [],
-    "knownVendors": [],
-    "knownProgramStart": null,
+    "alprStatus": "Public policy and statutory reports located; additional records requested",
+    "listingBasis": ["Request filed", "Policy obtained", "Statutory report"],
+    "currentPolicy": {
+      "label": "General Order 2080 — Automated License Plate Readers, issued Jan. 1, 2025",
+      "url": "https://www.lincoln.ne.gov/files/sharedassets/public/v/4/police/policies/2080.pdf"
+    },
+    "privacyPolicy": "Privacy requirements included in General Order 2080; separate standalone privacy policy not yet located",
+    "annualReports": [
+      {
+        "label": "NCC ALPR Data Collection: 2024; Q1–Q4 2025; Q1–Q2 2026",
+        "url": "https://ncc.nebraska.gov/automatic-license-plate-reader-resources"
+      }
+    ],
+    "knownVendors": ["Axon"],
+    "knownProgramStart": "Early 2024 trial; full implementation Oct. 28, 2024",
     "requestIds": ["QCN-NE-2026-003"],
     "links": [
       {
@@ -80,10 +88,12 @@
     ],
     "lastReviewed": "2026-09-14",
     "openQuestions": [
-      "Does LPD operate fixed ALPR installations in addition to mobile units, and where?",
-      "Has LPD submitted required annual § 60-3206 reports to the Nebraska Crime Commission?",
-      "What data-sharing agreements exist with other agencies, including LCSO and Nebraska State Patrol?",
-      "Which vendors — Axon, Flock, Motorola, or others — supply LPD's ALPR systems?"
+      "The public dashboard listed 68 active fleet devices and zero outpost or lightpost devices on September 14, 2026. Does LPD operate or plan any fixed ALPR installations not reflected in that dashboard, and what non-tactical records describe their approval or operation?",
+      "LPD reports are publicly listed for 2024, Q1–Q4 2025, and Q1–Q2 2026. How do those reporting periods relate to the annual-report requirement in General Order 2080 and Neb. Rev. Stat. § 60-3206?",
+      "What current written data-sharing or system-access agreements govern LPD ALPR information sharing with Lancaster County Sheriff's Office, Nebraska State Patrol, Lincoln Parking Services, other governmental entities, or vendors?",
+      "The LPD-linked transparency portal identifies Axon. What contracts, subscriptions, resellers, integrators, maintenance providers, or other vendors support LPD's ALPR program?",
+      "What historical policy changes occurred between the November 1, 2024 and January 1, 2025 versions of General Order 2080?",
+      "How do the dashboard's 'retained plate reads,' 'hot-list hits,' and 30-day category counts relate to the § 60-3206 report's confirmed-match and non-correlated-match fields?"
     ]
   },
   {
