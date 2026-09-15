@@ -53,6 +53,7 @@
     "jurisdiction": "City of Lincoln",
     "governmentLevel": "Municipal",
     "alprStatus": "Public policy and statutory reports located; additional records requested",
+    "statusLabel": "Policy & reports located",
     "listingBasis": ["Request filed", "Policy obtained", "Statutory report"],
     "currentPolicy": {
       "label": "General Order 2080 — Automated License Plate Readers, issued Jan. 1, 2025",

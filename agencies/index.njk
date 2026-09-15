@@ -24,7 +24,7 @@ permalink: /agencies/index.html
       <div class="agency-card-name">{{ agency.name }}</div>
       <div class="agency-card-meta">{{ agency.governmentLevel }} &middot; {{ agency.jurisdiction }}</div>
       <div class="agency-card-status">
-        <span class="badge badge-{{ agency.alprStatus | statusClass }}">{{ agency.alprStatus }}</span>
+        <span class="badge badge-{{ agency.alprStatus | statusClass }}">{{ agency.statusLabel or agency.alprStatus }}</span>
       </div>
       {% if agency.listingBasis and agency.listingBasis.length > 0 %}
       <div class="agency-card-basis">{{ agency.listingBasis | join(" · ") }}</div>
