@@ -69,7 +69,7 @@ source_agency: Full agency name
 received_date: YYYY-MM-DD
 document_date: YYYY-MM-DD
 request_id: QCN-NE-2026-001
-source_type: Public-records production | Policy | Annual report | Correspondence | Other
+source_type: Policy  # see taxonomy below
 original_filename: original-name-from-agency.pdf
 sha256: "<hash>"
 redactions: "Agency-applied redactions preserved" | "None apparent"
@@ -77,6 +77,19 @@ redactions: "Agency-applied redactions preserved" | "None apparent"
 ```
 
 Optional fields (include only when applicable): `signatory`, `sender`, `sender_title`, `public_information_officer`, `statutes_cited_by_agency` (array), `topics` (array).
+
+**`source_type` values:**
+
+| Type | Examples |
+| ---- | -------- |
+| `Policy` | General orders, privacy policies, retention policies, SOPs |
+| `Statutory report` | § 60-3206 data-collection forms and annual reports |
+| `Procurement` | RFPs, contracts, SOWs, POs, invoices, grant materials |
+| `Correspondence` | Agency emails, letters, MuckRock messages, fee estimates |
+| `Public dashboard` | Axon transparency portal screenshots or exports |
+| `Governing record` | City Council/County Board agenda, resolution, minutes |
+| `Data-sharing agreement` | MOU, access agreement, interlocal agreement |
+| `Litigation / review` | Attorney General petitions, reconsideration responses, court records |
 
 The `.md` filename determines the PDF URL — the site expects a `.pdf` with the same base name in the same folder.
 
