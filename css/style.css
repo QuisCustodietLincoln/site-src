@@ -302,8 +302,9 @@ tbody td {
 }
 
 .badge-filed                      { background: #e0e7ff; color: #3730a3; }
-.badge-pending                    { background: #f3f4f6; color: #374151; }
-.badge-extension-estimate-received { background: #fef9c3; color: #854d0e; }
+.badge-pending                        { background: #f3f4f6; color: #374151; }
+.badge-clarification-narrowing-requested { background: #fef9c3; color: #854d0e; }
+.badge-extension-estimate-received    { background: #fef9c3; color: #854d0e; }
 .badge-partial-production         { background: #fef3c7; color: #92400e; }
 .badge-completed                  { background: #d1fae5; color: #065f46; }
 .badge-denied-partially-denied    { background: #fee2e2; color: #991b1b; }
