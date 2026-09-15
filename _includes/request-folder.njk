@@ -71,7 +71,7 @@ layout: base.njk
           <td><a href="{{ doc.url }}">{{ doc.data.title }}</a></td>
           <td>{{ doc.data.source_type }}</td>
           <td>{{ doc.data.document_date | dateDisplay }}</td>
-          <td><a class="ext-link" href="/documents/{{ requestId }}/{{ doc.page.fileSlug }}.pdf" target="_blank" rel="noopener">PDF ↗</a></td>
+          <td><a class="ext-link" href="/documents/{{ requestId }}/{{ doc.page.inputPath | inputBasename }}.pdf" target="_blank" rel="noopener">PDF ↗</a></td>
         </tr>
         {% endfor %}
       </tbody>

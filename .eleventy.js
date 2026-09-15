@@ -13,6 +13,12 @@ module.exports = function(eleventyConfig) {
       .replace(/^-|-$/g, "");
   });
 
+  eleventyConfig.addFilter("inputBasename", function(inputPath) {
+    // inputPath is the raw file path (e.g. ./documents/QCN-NE-2026-003/2026-09-14-foo.md)
+    // Returns the filename without extension, preserving any date prefix Eleventy would otherwise strip.
+    return String(inputPath).split("/").pop().replace(/\.[^.]+$/, "");
+  });
+
   eleventyConfig.addFilter("filterByRequestId", function(docs, requestId) {
     if (!docs) return [];
     return docs.filter(doc => doc.data.request_id === requestId);

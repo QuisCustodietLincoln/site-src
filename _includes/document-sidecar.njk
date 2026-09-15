@@ -75,6 +75,6 @@ layout: base.njk
   <div class="section-header">
     <h2>File</h2>
   </div>
-  <p><a class="ext-link" href="/documents/{{ request_id }}/{{ page.fileSlug }}.pdf" target="_blank" rel="noopener">View / download PDF ↗</a></p>
+  <p><a class="ext-link" href="/documents/{{ request_id }}/{{ page.inputPath | inputBasename }}.pdf" target="_blank" rel="noopener">View / download PDF ↗</a></p>
 
 </div>
