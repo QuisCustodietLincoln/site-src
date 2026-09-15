@@ -12,6 +12,7 @@
     "knownVendors": [],
     "knownProgramStart": null,
     "requestIds": ["QCN-NE-2026-001"],
+    "links": [],
     "lastReviewed": "2026-09-09",
     "openQuestions": [
       "Did the County Board formally approve ALPR contracts or funding via resolution or motion?",
@@ -32,7 +33,13 @@
     "knownVendors": [],
     "knownProgramStart": null,
     "requestIds": ["QCN-NE-2026-002"],
-    "lastReviewed": "2026-09-09",
+    "links": [
+      {
+        "label": "NCC Automatic License Plate Reader Resources",
+        "url": "https://ncc.nebraska.gov/automatic-license-plate-reader-resources"
+      }
+    ],
+    "lastReviewed": "2026-09-14",
     "openQuestions": [
       "Has LCSO installed fixed ALPR units on NDOT right-of-way, and under what agreement?",
       "What Motorola, Axon, or Flock systems does LCSO operate, and how many units?",
@@ -53,7 +60,25 @@
     "knownVendors": [],
     "knownProgramStart": null,
     "requestIds": ["QCN-NE-2026-003"],
-    "lastReviewed": "2026-09-09",
+    "links": [
+      {
+        "label": "Transparency in Policing / Automated License Plate Readers",
+        "url": "https://www.lincoln.ne.gov/City/Departments/Police/About-LPD/Transparency/Automated-License-Plate-Readers"
+      },
+      {
+        "label": "Axon Transparency Portal",
+        "url": "https://lincolnpdne.evidence.com/alpr/public/policy"
+      },
+      {
+        "label": "General Order 2080 — Automated License Plate Readers (PDF)",
+        "url": "https://www.lincoln.ne.gov/files/sharedassets/public/v/4/police/policies/2080.pdf"
+      },
+      {
+        "label": "NCC Automatic License Plate Reader Resources",
+        "url": "https://ncc.nebraska.gov/automatic-license-plate-reader-resources"
+      }
+    ],
+    "lastReviewed": "2026-09-14",
     "openQuestions": [
       "Does LPD operate fixed ALPR installations in addition to mobile units, and where?",
       "Has LPD submitted required annual § 60-3206 reports to the Nebraska Crime Commission?",
@@ -74,6 +99,7 @@
     "knownVendors": [],
     "knownProgramStart": null,
     "requestIds": ["QCN-NE-2026-004"],
+    "links": [],
     "lastReviewed": "2026-09-09",
     "openQuestions": [
       "Have LPD and LCSO submitted the annual § 60-3206 ALPR reports required by Nebraska law?",

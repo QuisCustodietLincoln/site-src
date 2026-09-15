@@ -96,6 +96,17 @@ eleventyComputed:
     </div>
   </div>
 
+  {% if ag.links and ag.links.length > 0 %}
+  <div class="section-header">
+    <h2>Public Resources</h2>
+  </div>
+  <ul class="agency-links">
+    {% for link in ag.links %}
+    <li><a class="ext-link" href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label }} ↗</a></li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
   {% if ag.openQuestions.length > 0 %}
   <div class="open-questions">
     <h3>Open Questions</h3>

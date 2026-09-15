@@ -7,7 +7,8 @@
     "dateFiled": "2026-09-09",
     "status": "Pending",
     "muckrockUrl": "https://www.muckrock.com/foi/lancaster-county-21962/nebraska-public-records-request-county-boardclerk-alprlpr-records-january-1-2018present-220454/",
-    "notes": ""
+    "notes": "",
+    "timeline": []
   },
   {
     "requestId": "QCN-NE-2026-002",
@@ -15,9 +16,15 @@
     "agencyType": "County",
     "jurisdiction": "Lancaster County, NE",
     "dateFiled": "2026-09-09",
-    "status": "Pending",
+    "status": "Clarification / narrowing requested",
     "muckrockUrl": "https://www.muckrock.com/foi/lancaster-county-21962/nebraska-public-records-request-lancaster-county-sheriff-alprlpr-records-january-1-2018present-220449/",
-    "notes": ""
+    "notes": "",
+    "timeline": [
+      {
+        "date": "2026-09-14",
+        "note": "The Lancaster County Sheriff's Office requested clarification or narrowing, stating that the original request was not sufficiently specific to identify responsive records. The response did not state that responsive records do not exist and did not invoke an exemption for specific administrative records. A narrowed follow-up was submitted on September 14, 2026."
+      }
+    ]
   },
   {
     "requestId": "QCN-NE-2026-003",
@@ -25,9 +32,19 @@
     "agencyType": "City",
     "jurisdiction": "Lincoln, NE",
     "dateFiled": "2026-09-09",
-    "status": "Pending",
+    "status": "Clarification / narrowing requested",
     "muckrockUrl": "https://www.muckrock.com/foi/lincoln-4033/nebraska-public-records-request-lincoln-police-alprlpr-records-january-1-2023present-220451/",
-    "notes": ""
+    "notes": "",
+    "timeline": [
+      {
+        "date": "2026-09-14",
+        "note": "The City of Lincoln asked the requester to clarify the use of MuckRock and stated that it likely would withhold certain records under Neb. Rev. Stat. § 84-712.05(5). The City linked LPD's public ALPR transparency page. The response did not identify specific responsive records or state that responsive administrative records do not exist."
+      },
+      {
+        "date": "2026-09-14",
+        "note": "The request was narrowed to specified non-investigative administrative records, including prior policy versions, statutory reporting forms, procurement/payment records, and data-sharing/access agreements."
+      }
+    ]
   },
   {
     "requestId": "QCN-NE-2026-004",
@@ -37,6 +54,7 @@
     "dateFiled": "2026-09-09",
     "status": "Pending",
     "muckrockUrl": "https://www.muckrock.com/foi/nebraska-300/nebraska-public-records-request-lincolnlancaster-alpr-reports-and-correspondence-2018present-220453/",
-    "notes": ""
+    "notes": "",
+    "timeline": []
   }
 ]

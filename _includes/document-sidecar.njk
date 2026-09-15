@@ -1,0 +1,80 @@
+---
+layout: base.njk
+---
+<section class="page-header">
+  <div class="container">
+    <p class="breadcrumb"><a href="/documents/">Documents</a> / <a href="/documents/{{ request_id }}/">{{ request_id }}</a></p>
+    <p class="request-id-label">{{ source_type }}</p>
+    <h1>{{ title }}</h1>
+  </div>
+</section>
+
+<div class="container">
+
+  <div class="profile-grid">
+    <div class="profile-row">
+      <span class="profile-label">Agency</span>
+      <span class="profile-value">{{ source_agency }}</span>
+    </div>
+    <div class="profile-row">
+      <span class="profile-label">Document date</span>
+      <span class="profile-value">{{ document_date | dateDisplay }}</span>
+    </div>
+    <div class="profile-row">
+      <span class="profile-label">Received</span>
+      <span class="profile-value">{{ received_date | dateDisplay }}</span>
+    </div>
+    {% if signatory %}
+    <div class="profile-row">
+      <span class="profile-label">Signatory</span>
+      <span class="profile-value">{{ signatory }}</span>
+    </div>
+    {% endif %}
+    {% if sender %}
+    <div class="profile-row">
+      <span class="profile-label">From</span>
+      <span class="profile-value">{{ sender }}{% if sender_title %}, {{ sender_title }}{% endif %}</span>
+    </div>
+    {% endif %}
+    {% if public_information_officer %}
+    <div class="profile-row">
+      <span class="profile-label">PIO</span>
+      <span class="profile-value">{{ public_information_officer }}</span>
+    </div>
+    {% endif %}
+    {% if statutes_cited_by_agency %}
+    <div class="profile-row">
+      <span class="profile-label">Statutes cited</span>
+      <span class="profile-value">
+        {% for s in statutes_cited_by_agency %}{{ s }}{% if not loop.last %}<br>{% endif %}{% endfor %}
+      </span>
+    </div>
+    {% endif %}
+    {% if topics %}
+    <div class="profile-row">
+      <span class="profile-label">Topics</span>
+      <span class="profile-value">{{ topics | join(", ") }}</span>
+    </div>
+    {% endif %}
+    <div class="profile-row">
+      <span class="profile-label">Redactions</span>
+      <span class="profile-value">{{ redactions }}</span>
+    </div>
+    {% if original_filename and original_filename != "[SCREENSHOT]" and original_filename != "Email" %}
+    <div class="profile-row">
+      <span class="profile-label">Original filename</span>
+      <span class="profile-value"><code>{{ original_filename }}</code></span>
+    </div>
+    {% endif %}
+    <div class="profile-row">
+      <span class="profile-label">SHA-256</span>
+      <span class="profile-value"><code class="sha256">{{ sha256 }}</code></span>
+    </div>
+  </div>
+
+  <div class="section-header">
+    <h2>File</h2>
+  </div>
+  <p><a class="ext-link" href="/documents/{{ request_id }}/{{ page.fileSlug }}.pdf" target="_blank" rel="noopener">View / download PDF ↗</a></p>
+
+</div>

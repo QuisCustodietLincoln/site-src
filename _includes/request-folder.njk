@@ -32,12 +32,51 @@ layout: base.njk
     {% endif %}
   </div>
 
+  {% set reqData = null %}
+  {% for r in requests %}{% if r.requestId == requestId %}{% set reqData = r %}{% endif %}{% endfor %}
+
+  {% if reqData and reqData.timeline and reqData.timeline.length > 0 %}
+  <div class="section-header">
+    <h2>Timeline</h2>
+  </div>
+  <div class="timeline">
+    {% for entry in reqData.timeline %}
+    <div class="timeline-entry">
+      <span class="timeline-date">{{ entry.date | dateDisplay }}</span>
+      <p class="timeline-note">{{ entry.note }}</p>
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
   <div class="section-header">
     <h2>Released Documents</h2>
   </div>
 
-  {% if content and content | trim %}
-    {{ content | safe }}
+  {% set docs = (collections.releasedDocument or []) | filterByRequestId(requestId) %}
+  {% if docs.length > 0 %}
+  <div class="table-wrap">
+    <table class="doc-table">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Type</th>
+          <th>Date</th>
+          <th>PDF</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for doc in docs %}
+        <tr>
+          <td><a href="{{ doc.url }}">{{ doc.data.title }}</a></td>
+          <td>{{ doc.data.source_type }}</td>
+          <td>{{ doc.data.document_date | dateDisplay }}</td>
+          <td><a class="ext-link" href="/documents/{{ requestId }}/{{ doc.page.fileSlug }}.pdf" target="_blank" rel="noopener">PDF ↗</a></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
   {% else %}
   <div class="empty-state">
     <p>No documents have been released for this request yet.</p>

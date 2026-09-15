@@ -13,6 +13,11 @@ module.exports = function(eleventyConfig) {
       .replace(/^-|-$/g, "");
   });
 
+  eleventyConfig.addFilter("filterByRequestId", function(docs, requestId) {
+    if (!docs) return [];
+    return docs.filter(doc => doc.data.request_id === requestId);
+  });
+
   eleventyConfig.addFilter("dateDisplay", function(dateStr) {
     const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
     if (dateStr instanceof Date) {
