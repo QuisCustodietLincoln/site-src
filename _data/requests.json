@@ -50,12 +50,16 @@
     "notes": "",
     "timeline": [
       {
-        "date": "2026-09-14",
-        "note": "The City of Lincoln asked the requester to clarify the use of MuckRock and stated that it likely would withhold certain records under Neb. Rev. Stat. § 84-712.05(5). The City linked LPD's public ALPR transparency page. The response did not identify specific responsive records or state that responsive administrative records do not exist."
+        "date": "2026-09-09",
+        "note": "City of Lincoln Office of the City Attorney requested confirmation of Nebraska residency before processing the request, citing MuckRock's Boston, MA mailing address as the basis for the inquiry. Residency confirmed same day."
       },
       {
         "date": "2026-09-14",
-        "note": "The request was narrowed to specified non-investigative administrative records, including prior policy versions, statutory reporting forms, procurement/payment records, and data-sharing/access agreements."
+        "note": "Grace R. Willnerd, Special Assistant City Attorney, responded questioning whether MuckRock had solicited the request to circumvent the nonresident fee rule, and stated that records beyond the public LPD transparency page would likely be withheld under Neb. Rev. Stat. § 84-712.05(5). The response did not identify specific responsive records or state that responsive administrative records do not exist."
+      },
+      {
+        "date": "2026-09-14",
+        "note": "The request was narrowed to specified non-investigative administrative records: § 60-3206 reporting forms, the superseded Nov. 1, 2024 version of General Order 2080, Axon procurement and payment records, and current data-sharing or access agreements. Raw plate data and investigative material explicitly excluded."
       }
     ]
   },
