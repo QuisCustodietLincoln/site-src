@@ -5,10 +5,19 @@
     "agencyType": "County",
     "jurisdiction": "Lancaster County, NE",
     "dateFiled": "2026-09-09",
-    "status": "Pending",
+    "status": "Completed",
     "muckrockUrl": "https://www.muckrock.com/foi/lancaster-county-21962/nebraska-public-records-request-county-boardclerk-alprlpr-records-january-1-2018present-220454/",
     "notes": "",
-    "timeline": []
+    "timeline": [
+      {
+        "date": "2026-09-15",
+        "note": "Lancaster County Clerk responded, providing 23 meeting minutes (2018–2026) via AgendaCenter links and a ZIP archive of 12 procurement records (contracts, amendments, and a resolution covering Vigilant Solutions mobile LPR service 2021–2026 and Motorola fixed-camera system 2025–2026, plus an NDOT right-of-way agreement). Respondent: Angela Zocholl, Records Administrator."
+      },
+      {
+        "date": "2026-09-16",
+        "note": "Lancaster County Clerk provided payment vouchers for the ALPR/LPR program as an additional tranche of records and declared the request complete."
+      }
+    ]
   },
   {
     "requestId": "QCN-NE-2026-002",

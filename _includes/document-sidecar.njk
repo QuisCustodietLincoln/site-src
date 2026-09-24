@@ -56,6 +56,12 @@ layout: base.njk
       <span class="profile-value">{{ topics | join(", ") }}</span>
     </div>
     {% endif %}
+    {% if notes %}
+    <div class="profile-row profile-row-notes">
+      <span class="profile-label">Notes</span>
+      <span class="profile-value">{{ notes }}</span>
+    </div>
+    {% endif %}
     <div class="profile-row">
       <span class="profile-label">Redactions</span>
       <span class="profile-value">{{ redactions }}</span>

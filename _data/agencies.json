@@ -4,20 +4,27 @@
     "slug": "lancaster-county-clerk",
     "jurisdiction": "Lancaster County",
     "governmentLevel": "County",
-    "alprStatus": "Records requested",
-    "listingBasis": ["Request filed"],
-    "currentPolicy": null,
-    "privacyPolicy": null,
+    "alprStatus": "Active ALPR program; contracts and governing records produced",
+    "statusLabel": "Records produced",
+    "listingBasis": ["Request filed", "Contract obtained"],
+    "currentPolicy": "No standalone ALPR policy located; program governed by Neb. Rev. Stat. §§ 60-3201 to 60-3209 and contract terms",
+    "privacyPolicy": "180-day data retention and purge requirement per contract and Nebraska ALPR Privacy Act; facial recognition explicitly excluded from all Vigilant Solutions contracts",
     "annualReports": [],
-    "knownVendors": [],
-    "knownProgramStart": null,
+    "knownVendors": ["Vigilant Solutions (Motorola Solutions)", "Motorola Solutions"],
+    "knownProgramStart": "January 2022 (first Vigilant Solutions contract term); LPR hardware deployed by LCSO since ~2018",
     "requestIds": ["QCN-NE-2026-001"],
-    "links": [],
-    "lastReviewed": "2026-09-09",
+    "links": [
+      {
+        "label": "NCC Automatic License Plate Reader Resources",
+        "url": "https://ncc.nebraska.gov/automatic-license-plate-reader-resources"
+      }
+    ],
+    "lastReviewed": "2026-09-23",
     "openQuestions": [
-      "Did the County Board formally approve ALPR contracts or funding via resolution or motion?",
-      "Are there interlocal agreements between Lancaster County and NDOT covering ALPR installations on state highway right-of-way?",
-      "What vendors have received County payments for ALPR equipment, software, or services since 2018?"
+      "The NDOT State/County Agreement (C-23-0809) authorizes ALPR installation on state highway right-of-way. Where exactly are fixed readers installed, and how many?",
+      "The December 2025 Motorola procurement ($793,715.71 total) covers 12 fixed solar/cellular L6Q cameras on a 5-year subscription. Has deployment begun and which highway corridors are covered?",
+      "Has the Lancaster County Sheriff's Office submitted annual § 60-3206 reports to the Nebraska Crime Commission as required by the ALPR Privacy Act?",
+      "Does Lancaster County share ALPR data with LPD, Nebraska State Patrol, or federal task forces under the Vigilant Solutions LEARN database access included in contract C-21-0724?"
     ]
   },
   {
