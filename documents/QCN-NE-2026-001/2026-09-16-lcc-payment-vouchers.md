@@ -9,7 +9,7 @@ request_id: "QCN-NE-2026-001"
 source_type: "Procurement"
 original_filename: "Payment_Vouchers.pdf"
 sha256: "538b02c4787a703cec898972218fdede9d3a6b33c4cff6962377a4fbb3c48409"
-redactions: "Inconclusive — flag for manual review"
+redactions: false
 topics:
   - "Procurement"
   - "ALPR expenditures"
