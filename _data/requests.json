@@ -69,9 +69,14 @@
     "agencyType": "State",
     "jurisdiction": "State of Nebraska",
     "dateFiled": "2026-09-09",
-    "status": "Pending",
+    "status": "Extension / estimate received",
     "muckrockUrl": "https://www.muckrock.com/foi/nebraska-300/nebraska-public-records-request-lincolnlancaster-alpr-reports-and-correspondence-2018present-220453/",
     "notes": "",
-    "timeline": []
+    "timeline": [
+      {
+        "date": "2026-09-16",
+        "note": "Nebraska Crime Commission (Drew Bigham, Deputy Executive Director) acknowledged receipt and confirmed responsive records exist. Cited volume as the basis for exceeding the 4-business-day statutory window under § 84-712; committed to production within 7 business days of receipt (by approximately September 24, 2026). Fees waived due to Nebraska residency."
+      }
+    ]
   }
 ]
