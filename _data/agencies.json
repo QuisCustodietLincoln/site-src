@@ -37,16 +37,25 @@
     "slug": "lancaster-county-sheriff",
     "jurisdiction": "Lancaster County",
     "governmentLevel": "County",
-    "alprStatus": "Records request denied; appeal rights available under § 84-712.03",
-    "statusLabel": "Request denied",
-    "listingBasis": ["Request filed"],
-    "currentPolicy": null,
-    "privacyPolicy": null,
-    "annualReports": [],
-    "knownVendors": [],
-    "knownProgramStart": null,
+    "alprStatus": "Policy obtained via media; records request denied; 9 cameras confirmed (3 mobile, 6 fixed)",
+    "statusLabel": "Policy obtained",
+    "listingBasis": ["Request filed", "Policy obtained"],
+    "currentPolicy": "SOP #1371 — License Plate Readers, effective August 6, 2018 (issued by Sheriff Terry T. Wagner); published by KOLN 10/11, September 18, 2026. Governs use, retention (180-day limit), hot-list management, data sharing, and annual reporting under NRS 60-3201 to 60-3209.",
+    "privacyPolicy": "180-day data retention limit per SOP #1371 § III.E; data sharing restricted to warrant, subpoena, consent, hit, or emergency under § III.D",
+    "annualReports": [
+      {
+        "label": "NCC ALPR Data Collection: 2018–2019, 2022, 2024, 2025",
+        "url": "https://ncc.nebraska.gov/automatic-license-plate-reader-resources"
+      }
+    ],
+    "knownVendors": ["Motorola Solutions"],
+    "knownProgramStart": "August 6, 2018 (SOP #1371 effective date; Sheriff Wagner confirmed 9 cameras — 3 mobile, 6 fixed — to KOLN 10/11 on September 18, 2026)",
     "requestIds": ["QCN-NE-2026-002"],
     "links": [
+      {
+        "label": "KOLN 10/11: How Lancaster County uses automated license plate readers (Sept. 18, 2026)",
+        "url": "https://www.1011now.com/2026/09/18/how-lancaster-county-uses-automated-license-plate-readers/"
+      },
       {
         "label": "NCC Automatic License Plate Reader Resources",
         "url": "https://ncc.nebraska.gov/automatic-license-plate-reader-resources"
@@ -54,10 +63,10 @@
     ],
     "lastReviewed": "2026-09-23",
     "openQuestions": [
-      "LCSO denied the narrowed request citing § 84-712.01(4)(c) (insufficient specificity). Does LCSO contend that named record types — policies, § 60-3206 reports, vendor contracts, equipment inventory, NDOT agreements — are genuinely unidentifiable, or is this a threshold objection to the request format?",
-      "Has LCSO installed fixed ALPR units on NDOT right-of-way, and under what agreement?",
-      "What Motorola, Axon, or Flock systems does LCSO operate, and how many units?",
-      "Does LCSO share ALPR data with LPD, the Nebraska State Patrol, or federal task forces?"
+      "LCSO denied QCN-NE-2026-002 on specificity grounds (§ 84-712.01(4)(c)) while simultaneously denying KOLN 10/11's requests using § 84-712.05(5) (investigative exemption) — including a request for camera brand and model. What is LCSO's basis for treating camera model information as 'strategic or tactical information used in law enforcement training'?",
+      "SOP #1371 § III.B.1.f requires the Criminal Investigations Captain to post the SOP on the Sheriff's Office public website. Is it currently posted there, and is SOP #1371 (effective 2018) the current version or has it been superseded?",
+      "Sheriff Wagner confirmed 9 cameras (3 mobile, 6 fixed) to KOLN 10/11 on September 18, 2026. Where are the 6 fixed units located — are any installed on NDOT right-of-way under Agreement C-23-0809?",
+      "Does LCSO share ALPR data with LPD, the Nebraska State Patrol, or federal task forces under the Vigilant Solutions LEARN database or otherwise?"
     ]
   },
   {
