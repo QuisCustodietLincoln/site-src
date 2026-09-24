@@ -9,7 +9,12 @@
     "listingBasis": ["Request filed", "Contract obtained"],
     "currentPolicy": "No standalone ALPR policy located; program governed by Neb. Rev. Stat. §§ 60-3201 to 60-3209 and contract terms",
     "privacyPolicy": "180-day data retention and purge requirement per contract and Nebraska ALPR Privacy Act; facial recognition explicitly excluded from all Vigilant Solutions contracts",
-    "annualReports": [],
+    "annualReports": [
+      {
+        "label": "NCC ALPR Data Collection: 2018–2019, 2022, 2024, 2025",
+        "url": "https://ncc.nebraska.gov/automatic-license-plate-reader-resources"
+      }
+    ],
     "knownVendors": ["Vigilant Solutions (Motorola Solutions)", "Motorola Solutions"],
     "knownProgramStart": "January 2022 (first Vigilant Solutions contract term); LPR hardware deployed by LCSO since ~2018",
     "requestIds": ["QCN-NE-2026-001"],
@@ -23,7 +28,7 @@
     "openQuestions": [
       "The NDOT State/County Agreement (C-23-0809) authorizes ALPR installation on state highway right-of-way. Where exactly are fixed readers installed, and how many?",
       "The December 2025 Motorola procurement ($793,715.71 total) covers 12 fixed solar/cellular L6Q cameras on a 5-year subscription. Has deployment begun and which highway corridors are covered?",
-      "Has the Lancaster County Sheriff's Office submitted annual § 60-3206 reports to the Nebraska Crime Commission as required by the ALPR Privacy Act?",
+      "LCSO has filed § 60-3206 reports with the NCC for 2018–2019, 2022, 2024, and 2025. Why are reports for 2020, 2021, and 2023 absent from the NCC's public listing?",
       "Does Lancaster County share ALPR data with LPD, Nebraska State Patrol, or federal task forces under the Vigilant Solutions LEARN database access included in contract C-21-0724?"
     ]
   },
