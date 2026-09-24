@@ -37,7 +37,8 @@
     "slug": "lancaster-county-sheriff",
     "jurisdiction": "Lancaster County",
     "governmentLevel": "County",
-    "alprStatus": "Records requested",
+    "alprStatus": "Records request denied; appeal rights available under § 84-712.03",
+    "statusLabel": "Request denied",
     "listingBasis": ["Request filed"],
     "currentPolicy": null,
     "privacyPolicy": null,
@@ -51,11 +52,11 @@
         "url": "https://ncc.nebraska.gov/automatic-license-plate-reader-resources"
       }
     ],
-    "lastReviewed": "2026-09-14",
+    "lastReviewed": "2026-09-23",
     "openQuestions": [
+      "LCSO denied the narrowed request citing § 84-712.01(4)(c) (insufficient specificity). Does LCSO contend that named record types — policies, § 60-3206 reports, vendor contracts, equipment inventory, NDOT agreements — are genuinely unidentifiable, or is this a threshold objection to the request format?",
       "Has LCSO installed fixed ALPR units on NDOT right-of-way, and under what agreement?",
       "What Motorola, Axon, or Flock systems does LCSO operate, and how many units?",
-      "Has LCSO submitted annual § 60-3206 reports to the Nebraska Crime Commission?",
       "Does LCSO share ALPR data with LPD, the Nebraska State Patrol, or federal task forces?"
     ]
   },
