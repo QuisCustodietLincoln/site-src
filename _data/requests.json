@@ -45,7 +45,7 @@
     "agencyType": "City",
     "jurisdiction": "Lincoln, NE",
     "dateFiled": "2026-09-09",
-    "status": "Clarification / narrowing requested",
+    "status": "Extension / estimate received",
     "muckrockUrl": "https://www.muckrock.com/foi/lincoln-4033/nebraska-public-records-request-lincoln-police-alprlpr-records-january-1-2023present-220451/",
     "notes": "",
     "timeline": [
@@ -60,6 +60,10 @@
       {
         "date": "2026-09-14",
         "note": "The request was narrowed to specified non-investigative administrative records: § 60-3206 reporting forms, the superseded Nov. 1, 2024 version of General Order 2080, Axon procurement and payment records, and current data-sharing or access agreements. Raw plate data and investigative material explicitly excluded."
+      },
+      {
+        "date": "2026-09-16",
+        "note": "Grace R. Willnerd, Special Assistant City Attorney, acknowledged the narrowed request and stated that production cannot be fulfilled within 4 business days due to current departmental workload. Estimated fulfillment date: October 23, 2026."
       }
     ]
   },
